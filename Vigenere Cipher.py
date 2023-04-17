@@ -4,7 +4,12 @@
 # Program 3 - The Vigenere Cipher
 
 # Ask the user for the message
-user_text = input("Input your message: ")
+while True:
+    user_text = input("Input your message: ")
+    if user_text.isupper() and ' ' not in user_text:
+        break
+    else:
+        print ("Invalid Input. Please Enter an uppercase letter without spaces.")
 # Ask the user for key
 # Create a list of letters
 # Create a list of numbers from 0 to 25
