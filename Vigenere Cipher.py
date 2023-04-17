@@ -4,6 +4,7 @@
 # Program 3 - The Vigenere Cipher
 
 # Ask the user for the message
+user_text = input("Input your message: ")
 # Ask the user for key
 # Create a list of letters
 # Create a list of numbers from 0 to 25
