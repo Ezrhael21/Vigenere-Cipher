@@ -11,6 +11,12 @@ while True:
     else:
         print ("Invalid Input. Please Enter an uppercase letter without spaces.")
 # Ask the user for key
+while True:
+    user_key = input("Input your key: ")
+    if user_key.isupper() and ' ' not in user_key:
+        break
+    else:
+        print("Invalid input. Please enter an uppercase letter without spaces.")
 # Create a list of letters
 # Create a list of numbers from 0 to 25
 # Convert the length of the key to the same length of the message
