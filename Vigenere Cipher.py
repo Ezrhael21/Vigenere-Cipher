@@ -36,6 +36,11 @@ for i in user_text:
     encrypted_user_text.append(number_list[index])
 
 # Encrypt the user key to its corresponding number
+encrypted_user_key = []
+for i in key:
+    index = letter_list.index(i)
+    encrypted_user_key.append(number_list[index])
+
 # Add the numbers of the message and the key
 # Modify the numbers into the list
 # Convert the modified number to its corresponding letter
