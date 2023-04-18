@@ -5,11 +5,14 @@
 
 import pyfiglet
 
+print ("=" * 100)
 font = pyfiglet.figlet_format("Vigenere Cipher", font = "big" )
 print (font)
 
 # Introduction to the program
+print ("=" * 100)
 Name=input("Enter your username: ")
+print ("=" * 100)
 print ("Hello!", Name,)
 print ("Today, we are going to use the Vigenere Cipher")
 
@@ -17,6 +20,7 @@ moredata = True
 while moredata:
 
     # Ask the user for the message
+    print ("=" * 100)
     while True:
         user_text = input("Input your message: ")
         if user_text.isupper() and ' ' not in user_text:
@@ -84,16 +88,19 @@ while moredata:
         encrypted_message += letter_list[num] + " "
 
     #Time Delay
+    print ("=" * 100)
     print ("Processing...")
     import time
     time.sleep(7)
 
     # Print Output
+    print ("=" * 100)
     print ("Message     : ", user_text, encrypted_user_text_str)
     print ("Key         : ", user_key, encrypted_user_key_str)
     print ("Add         : ", add_message_key_str)
     print ("Mod         : ", modify_number_str)
     print ("Cipher Text : ", encrypted_message)
+    print ("=" * 100)
 
     while True:
         repeat = input("Do you want to try again? (Yes/No): ")
@@ -105,4 +112,6 @@ while moredata:
         else:
             print("Invalid input. Please enter 'Yes' or 'No'.")
 
+print ("=" * 100)
 print ("Thank you for using this program.")
+print ("=" * 100)
