@@ -24,6 +24,8 @@ import string
 letter_list = list(string.ascii_uppercase)
 
 # Create a list of numbers from 0 to 25
+number_list = list(range(0,26))
+
 # Convert the length of the key to the same length of the message
 # Encrypt the user text to its corresponding number
 # Encrypt the user key to its corresponding number
