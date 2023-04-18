@@ -3,6 +3,11 @@
 # 04/05/2023
 # Program 3 - The Vigenere Cipher
 
+import pyfiglet
+
+font = pyfiglet.figlet_format("Vigenere Cipher", font = "big" )
+print (font)
+
 moredata = True
 while moredata:
 
