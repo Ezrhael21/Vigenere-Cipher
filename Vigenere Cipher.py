@@ -47,5 +47,16 @@ for x, y in zip(encrypted_user_text, encrypted_user_key):
     add_message_key.append(x + y)
 
 # Modify the numbers into the list
+modify_number = []
+key_length = len(encrypted_user_key)
+for i, num in enumerate(encrypted_user_text):
+    key_num = encrypted_user_key[i % key_length]
+    modify_number.append((num + key_num) % 26)
+
 # Convert the modified number to its corresponding letter
+
 # Print Output
+print ("Message     : ", user_text, encrypted_user_text)
+print ("Key         : ", user_key, encrypted_user_key)
+print ("Add         : ", add_message_key)
+print ("Mod         : ", modify_number)
