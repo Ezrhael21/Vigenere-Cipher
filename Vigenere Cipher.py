@@ -3,26 +3,27 @@
 # 04/05/2023
 # Program 3 - The Vigenere Cipher
 
+import colorama
 import pyfiglet
 
-print ("=" * 100)
+print (colorama.Fore.GREEN + "=" * 100)
 font = pyfiglet.figlet_format("Vigenere Cipher", font = "big" )
-print (font)
+print (colorama.Fore.BLUE + font)
 
 # Introduction to the program
-print ("=" * 100)
-Name=input("Enter your username: ")
-print ("=" * 100)
-print ("Hello!", Name,)
+print (colorama.Fore.GREEN + "=" * 100)
+Name = input(colorama.Fore.BLUE + "Enter your username: ")
+print (colorama.Fore.GREEN + "=" * 100)
+print (colorama.Fore.YELLOW + "Hello!", Name,)
 print ("Today, we are going to use the Vigenere Cipher")
 
 moredata = True
 while moredata:
 
     # Ask the user for the message
-    print ("=" * 100)
+    print (colorama.Fore.GREEN + "=" * 100)
     while True:
-        user_text = input("Input your message: ")
+        user_text = input(colorama.Fore.WHITE + "Input your message: ")
         if user_text.isupper() and ' ' not in user_text:
             break
         else:
@@ -88,22 +89,22 @@ while moredata:
         encrypted_message += letter_list[num] + " "
 
     #Time Delay
-    print ("=" * 100)
-    print ("Processing...")
+    print (colorama.Fore.GREEN + "=" * 100)
+    print (colorama.Fore.WHITE + "Processing...")
     import time
     time.sleep(7)
 
     # Print Output
-    print ("=" * 100)
-    print ("Message     : ", user_text, encrypted_user_text_str)
-    print ("Key         : ", user_key, encrypted_user_key_str)
-    print ("Add         : ", add_message_key_str)
-    print ("Mod         : ", modify_number_str)
-    print ("Cipher Text : ", encrypted_message)
-    print ("=" * 100)
+    print (colorama.Fore.GREEN + "=" * 100)
+    print (colorama.Fore.BLUE + "Message     : ", colorama.Fore.RED + user_text, colorama.Fore.WHITE + encrypted_user_text_str)
+    print (colorama.Fore.BLUE + "Key         : ", colorama.Fore.RED + user_key, colorama.Fore.WHITE + encrypted_user_key_str)
+    print (colorama.Fore.BLUE + "Add         : ", colorama.Fore.WHITE + add_message_key_str)
+    print (colorama.Fore.BLUE + "Mod         : ", colorama.Fore.WHITE + modify_number_str)
+    print (colorama.Fore.BLUE + "Cipher Text : ", colorama.Fore.YELLOW + encrypted_message)
+    print (colorama.Fore.GREEN + "=" * 100)
 
     while True:
-        repeat = input("Do you want to try again? (Yes/No): ")
+        repeat = input(colorama.Fore.WHITE + "Do you want to try again? (Yes/No): ")
         if repeat.lower() == "yes":
             break
         elif repeat.lower() == "no":
@@ -112,6 +113,6 @@ while moredata:
         else:
             print("Invalid input. Please enter 'Yes' or 'No'.")
 
-print ("=" * 100)
-print ("Thank you for using this program.")
-print ("=" * 100)
+print (colorama.Fore.GREEN + "=" * 100)
+print (colorama.Fore.YELLOW + "Thank you for using this program.")
+print (colorama.Fore.GREEN + "=" * 100)
