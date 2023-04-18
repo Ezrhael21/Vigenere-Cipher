@@ -54,9 +54,13 @@ for i, num in enumerate(encrypted_user_text):
     modify_number.append((num + key_num) % 26)
 
 # Convert the modified number to its corresponding letter
+encrypted_message = ""
+for num in modify_number:
+    encrypted_message += letter_list[num] + " "
 
 # Print Output
 print ("Message     : ", user_text, encrypted_user_text)
 print ("Key         : ", user_key, encrypted_user_key)
 print ("Add         : ", add_message_key)
 print ("Mod         : ", modify_number)
+print ("Cipher Text : ", encrypted_message)
