@@ -8,6 +8,11 @@ import pyfiglet
 font = pyfiglet.figlet_format("Vigenere Cipher", font = "big" )
 print (font)
 
+# Introduction to the program
+Name=input("Enter your username: ")
+print ("Hello!", Name,)
+print ("Today, we are going to use the Vigenere Cipher")
+
 moredata = True
 while moredata:
 
