@@ -35,16 +35,25 @@ for i in user_text:
     index = letter_list.index(i)
     encrypted_user_text.append(number_list[index])
 
+# Convert the list of encrypted user text into str    
+encrypted_user_text_str = ' '.join(str(num) for num in encrypted_user_text)
+
 # Encrypt the user key to its corresponding number
 encrypted_user_key = []
 for i in key:
     index = letter_list.index(i)
     encrypted_user_key.append(number_list[index])
 
+# Convert the list of encrypted user key into str
+encrypted_user_key_str = ' '.join(str(num) for num in encrypted_user_key)
+
 # Add the numbers of the message and the key
 add_message_key = []
 for x, y in zip(encrypted_user_text, encrypted_user_key):
     add_message_key.append(x + y)
+
+# Convert the list of add_message_key into str
+add_message_key_str = ' '.join(str(num) for num in add_message_key)
 
 # Modify the numbers into the list
 modify_number = []
@@ -53,14 +62,17 @@ for i, num in enumerate(encrypted_user_text):
     key_num = encrypted_user_key[i % key_length]
     modify_number.append((num + key_num) % 26)
 
+# Convert the list of modified numbers into str
+modify_number_str = ' '.join(str(num) for num in modify_number)
+
 # Convert the modified number to its corresponding letter
 encrypted_message = ""
 for num in modify_number:
     encrypted_message += letter_list[num] + " "
 
 # Print Output
-print ("Message     : ", user_text, encrypted_user_text)
-print ("Key         : ", user_key, encrypted_user_key)
-print ("Add         : ", add_message_key)
-print ("Mod         : ", modify_number)
+print ("Message     : ", user_text, encrypted_user_text_str)
+print ("Key         : ", user_key, encrypted_user_key_str)
+print ("Add         : ", add_message_key_str)
+print ("Mod         : ", modify_number_str)
 print ("Cipher Text : ", encrypted_message)
