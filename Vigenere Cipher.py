@@ -70,6 +70,11 @@ encrypted_message = ""
 for num in modify_number:
     encrypted_message += letter_list[num] + " "
 
+#Time Delay
+print ("Processing...")
+import time
+time.sleep(7)
+
 # Print Output
 print ("Message     : ", user_text, encrypted_user_text_str)
 print ("Key         : ", user_key, encrypted_user_key_str)
