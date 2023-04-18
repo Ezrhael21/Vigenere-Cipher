@@ -30,6 +30,11 @@ number_list = list(range(0,26))
 key = (user_key[:len(user_text)] * ((len(user_text) // len(user_key[:len(user_text)])) + 1))[:len(user_text)]
 
 # Encrypt the user text to its corresponding number
+encrypted_user_text = []
+for i in user_text:
+    index = letter_list.index(i)
+    encrypted_user_text.append(number_list[index])
+
 # Encrypt the user key to its corresponding number
 # Add the numbers of the message and the key
 # Modify the numbers into the list
